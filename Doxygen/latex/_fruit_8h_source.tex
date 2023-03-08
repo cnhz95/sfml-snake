@@ -1,0 +1,36 @@
+\hypertarget{_fruit_8h_source}{}\doxysection{Fruit.\+h}
+\label{_fruit_8h_source}\index{C:/Users/chern/source/repos/sfml\_projekt/sfml\_projekt/Fruit.h@{C:/Users/chern/source/repos/sfml\_projekt/sfml\_projekt/Fruit.h}}
+\mbox{\hyperlink{_fruit_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*}}
+\DoxyCodeLine{2 \textcolor{comment}{ * Projekt, DT079G Programmeringsmetodik}}
+\DoxyCodeLine{3 \textcolor{comment}{ * Christian Hernandez}}
+\DoxyCodeLine{4 \textcolor{comment}{ */}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#ifndef FRUIT\_H}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#define FRUIT\_H}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_constants_8h}{Constants.h}}"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <SFML/Graphics.hpp>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <chrono>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <random>}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{17 \textcolor{keyword}{class }\mbox{\hyperlink{class_fruit}{Fruit}} : \textcolor{keyword}{public} sf::Drawable \{}
+\DoxyCodeLine{18 \textcolor{keyword}{public}:}
+\DoxyCodeLine{23     \mbox{\hyperlink{class_fruit_aa40ce1fdb1b361880d27171f05a2ab5a}{Fruit}}();}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{28     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_fruit_a76a7f19428cc6628e3e32ec266d06b3a}{respawn}}();}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{34     \textcolor{keyword}{const} sf::CircleShape\& \mbox{\hyperlink{class_fruit_a6c1e172e23405fc8e97af6e78d863204}{get\_fruit}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 \textcolor{keyword}{private}:}
+\DoxyCodeLine{42     \textcolor{keywordtype}{void} draw(sf::RenderTarget\& target, sf::RenderStates states) \textcolor{keyword}{const override};}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44     \textcolor{keyword}{const} \textcolor{keywordtype}{float} M\_RADIUS = \mbox{\hyperlink{namespaceconstants_aa36691d3ef920183d6e49d99d2313605}{constants::SQUARE\_SIZE}} / 2;}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46     sf::CircleShape m\_fruit;}
+\DoxyCodeLine{47 \};}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

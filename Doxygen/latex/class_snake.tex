@@ -1,0 +1,81 @@
+\hypertarget{class_snake}{}\doxysection{Snake Class Reference}
+\label{class_snake}\index{Snake@{Snake}}
+
+
+{\ttfamily \#include $<$Snake.\+h$>$}
+
+Inheritance diagram for Snake\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_snake}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_snake_aa9cbcdb4b25d84cbf83509039cac8d01}{Snake}} ()
+\item 
+void \mbox{\hyperlink{class_snake_af6d9af0774537f40e2d26b11ae3d9f8f}{move\+\_\+snake}} (const sf\+::\+Vector2f \&position)
+\item 
+void \mbox{\hyperlink{class_snake_ad290cd8c425aa675d4be24ba0e1437be}{increase\+\_\+size}} ()
+\item 
+const std\+::vector$<$ sf\+::\+Rectangle\+Shape $>$\+::iterator \mbox{\hyperlink{class_snake_a788974e41959a7f9e7545c479e581227}{get\+\_\+head}} () const
+\item 
+const std\+::vector$<$ sf\+::\+Rectangle\+Shape $>$\+::iterator \mbox{\hyperlink{class_snake_a25b7f6152e96cdb2df23aacebf20e0d0}{get\+\_\+tail}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class for the snake which handles it\textquotesingle{}s movement and increasement in size. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_snake_aa9cbcdb4b25d84cbf83509039cac8d01}\label{class_snake_aa9cbcdb4b25d84cbf83509039cac8d01}} 
+\index{Snake@{Snake}!Snake@{Snake}}
+\index{Snake@{Snake}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{Snake()}{Snake()}}
+{\footnotesize\ttfamily Snake\+::\+Snake (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default constructor. Creates the snake object with default size starting from the top left corner of the grid. Initializes the iterators pointing to the head and the tail. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_snake_a788974e41959a7f9e7545c479e581227}\label{class_snake_a788974e41959a7f9e7545c479e581227}} 
+\index{Snake@{Snake}!get\_head@{get\_head}}
+\index{get\_head@{get\_head}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{get\_head()}{get\_head()}}
+{\footnotesize\ttfamily const std\+::vector$<$ sf\+::\+Rectangle\+Shape $>$\+::iterator Snake\+::get\+\_\+head (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getter for the iterator pointing to the head. \begin{DoxyReturn}{Returns}
+const std\+::vector$<$sf\+::\+Rectangle\+Shape$>$\+::iterator Iterator pointing to the head. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_snake_a25b7f6152e96cdb2df23aacebf20e0d0}\label{class_snake_a25b7f6152e96cdb2df23aacebf20e0d0}} 
+\index{Snake@{Snake}!get\_tail@{get\_tail}}
+\index{get\_tail@{get\_tail}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{get\_tail()}{get\_tail()}}
+{\footnotesize\ttfamily const std\+::vector$<$ sf\+::\+Rectangle\+Shape $>$\+::iterator Snake\+::get\+\_\+tail (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Getter for the iterator pointing to the tail. \begin{DoxyReturn}{Returns}
+const std\+::vector$<$sf\+::\+Rectangle\+Shape$>$\+::iterator Iterator pointing to the tail. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_snake_ad290cd8c425aa675d4be24ba0e1437be}\label{class_snake_ad290cd8c425aa675d4be24ba0e1437be}} 
+\index{Snake@{Snake}!increase\_size@{increase\_size}}
+\index{increase\_size@{increase\_size}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{increase\_size()}{increase\_size()}}
+{\footnotesize\ttfamily void Snake\+::increase\+\_\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Increases the size of the snake whenever it encounters fruit. \mbox{\Hypertarget{class_snake_af6d9af0774537f40e2d26b11ae3d9f8f}\label{class_snake_af6d9af0774537f40e2d26b11ae3d9f8f}} 
+\index{Snake@{Snake}!move\_snake@{move\_snake}}
+\index{move\_snake@{move\_snake}!Snake@{Snake}}
+\doxysubsubsection{\texorpdfstring{move\_snake()}{move\_snake()}}
+{\footnotesize\ttfamily void Snake\+::move\+\_\+snake (\begin{DoxyParamCaption}\item[{const sf\+::\+Vector2f \&}]{position }\end{DoxyParamCaption})}
+
+Moves the snake by putting the square at the tail on the given position next to the head. 
+\begin{DoxyParams}{Parameters}
+{\em position} & The position in which to move the snake. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/chern/source/repos/sfml\+\_\+projekt/sfml\+\_\+projekt/\mbox{\hyperlink{_snake_8h}{Snake.\+h}}\item 
+C\+:/\+Users/chern/source/repos/sfml\+\_\+projekt/sfml\+\_\+projekt/\mbox{\hyperlink{_snake_8cpp}{Snake.\+cpp}}\end{DoxyCompactItemize}

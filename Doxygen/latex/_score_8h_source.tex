@@ -1,0 +1,43 @@
+\hypertarget{_score_8h_source}{}\doxysection{Score.\+h}
+\label{_score_8h_source}\index{C:/Users/chern/source/repos/sfml\_projekt/sfml\_projekt/Score.h@{C:/Users/chern/source/repos/sfml\_projekt/sfml\_projekt/Score.h}}
+\mbox{\hyperlink{_score_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*}}
+\DoxyCodeLine{2 \textcolor{comment}{ * Projekt, DT079G Programmeringsmetodik}}
+\DoxyCodeLine{3 \textcolor{comment}{ * Christian Hernandez}}
+\DoxyCodeLine{4 \textcolor{comment}{ */}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#ifndef SCORE\_H}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#define SCORE\_H}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_constants_8h}{Constants.h}}"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <SFML/Graphics.hpp>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{17 \textcolor{keyword}{class }\mbox{\hyperlink{class_score}{Score}} : \textcolor{keyword}{public} sf::Drawable \{}
+\DoxyCodeLine{18 \textcolor{keyword}{public}:}
+\DoxyCodeLine{23     \mbox{\hyperlink{class_score_a039c99843551e5e4b512ecee99e46617}{Score}}();}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{29     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_score_a505d2cdbb40778d613b8a9ab53fd0567}{update\_score}}();}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{35     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_score_af037313e93663b9c8472591e53209fc7}{update\_high\_score}}();}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 \textcolor{keyword}{private}:}
+\DoxyCodeLine{41     \textcolor{keywordtype}{void} init\_high\_score();}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{47     \textcolor{keywordtype}{void} init\_text();}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{54     \textcolor{keywordtype}{void} draw(sf::RenderTarget\& target, sf::RenderStates states) \textcolor{keyword}{const override};}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56     \textcolor{keyword}{const} std::string M\_FILENAME = \textcolor{stringliteral}{"{}high\_score.txt"{}};}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58     sf::Font m\_font;}
+\DoxyCodeLine{59     sf::Text m\_score\_text;}
+\DoxyCodeLine{60     \textcolor{keywordtype}{size\_t} m\_current\_score\{\};}
+\DoxyCodeLine{61     \textcolor{keywordtype}{size\_t} m\_high\_score\{\};}
+\DoxyCodeLine{62 \};}
+\DoxyCodeLine{63 }
+\DoxyCodeLine{64 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,83 @@
+\hypertarget{_game_8h_source}{}\doxysection{Game.\+h}
+\label{_game_8h_source}\index{C:/Users/chern/source/repos/sfml\_projekt/sfml\_projekt/Game.h@{C:/Users/chern/source/repos/sfml\_projekt/sfml\_projekt/Game.h}}
+\mbox{\hyperlink{_game_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/*}}
+\DoxyCodeLine{2 \textcolor{comment}{ * Projekt, DT079G Programmeringsmetodik}}
+\DoxyCodeLine{3 \textcolor{comment}{ * Christian Hernandez}}
+\DoxyCodeLine{4 \textcolor{comment}{ */}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#ifndef GAME\_H}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#define GAME\_H}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_constants_8h}{Constants.h}}"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_fruit_8h}{Fruit.h}}"{}}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_score_8h}{Score.h}}"{}}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_snake_8h}{Snake.h}}"{}}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_world_8h}{World.h}}"{}}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <SFML/Graphics.hpp>}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <algorithm>}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include <iterator>}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{22 \textcolor{keyword}{enum class} \mbox{\hyperlink{_game_8h_a33e243da48884e73997b5c5fa62864d4}{Game\_state}} \{ \mbox{\hyperlink{_game_8h_a33e243da48884e73997b5c5fa62864d4abe74d01145a0a6b1ab0952aecb6cb2f5}{main\_menu}}, \mbox{\hyperlink{_game_8h_a33e243da48884e73997b5c5fa62864d4a7ed501a93c1205e3a23f7f0313ea65dc}{playing}}, \mbox{\hyperlink{_game_8h_a33e243da48884e73997b5c5fa62864d4af8af61ed6db77551408eb5e96ee77818}{game\_over}} \};}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{28 \textcolor{keyword}{class }\mbox{\hyperlink{class_game}{Game}} : \textcolor{keyword}{public} sf::Drawable \{}
+\DoxyCodeLine{29 \textcolor{keyword}{public}:}
+\DoxyCodeLine{36     \mbox{\hyperlink{class_game_ad59df6562a58a614fda24622d3715b65}{Game}}();}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{44     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_game_a84b0aacb7e01fc07d21cc30b3c36ac46}{update\_game}}(\textcolor{keywordtype}{float} delta\_time);}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{49     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_game_a4e943602cc68d7d0c3346044fef07b19}{move\_snake}}();}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{55     \textcolor{keyword}{const} \mbox{\hyperlink{_game_8h_a33e243da48884e73997b5c5fa62864d4}{Game\_state}}\& \mbox{\hyperlink{class_game_ab545c91c36ce61b409ac8defde0630cc}{get\_state}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{61     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_game_aa745374321ba3402c9b5f26275ea7b20}{set\_state}}(\textcolor{keyword}{const} \mbox{\hyperlink{_game_8h_a33e243da48884e73997b5c5fa62864d4}{Game\_state}}\& new\_state);}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{68     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_game_ab022e6f2d1b39d2cddbbb49639fd4fc8}{set\_direction}}(\textcolor{keyword}{const} \mbox{\hyperlink{_snake_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}\& new\_direction);}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70 \textcolor{keyword}{private}:}
+\DoxyCodeLine{79     \textcolor{keyword}{template}<\textcolor{keyword}{typename} T, \textcolor{keyword}{typename} U>}
+\DoxyCodeLine{80     \textcolor{keywordtype}{bool} collides(\textcolor{keyword}{const} T\& shape\_a, \textcolor{keyword}{const} U\& shape\_b)\textcolor{keyword}{ const }\{}
+\DoxyCodeLine{81         \textcolor{keywordflow}{return} shape\_a.getGlobalBounds().intersects(shape\_b.getGlobalBounds());}
+\DoxyCodeLine{82     \}}
+\DoxyCodeLine{83 }
+\DoxyCodeLine{88     \textcolor{keyword}{struct }Dead\_snake \{}
+\DoxyCodeLine{89         \textcolor{keywordtype}{void} operator()(sf::RectangleShape\& square) \{}
+\DoxyCodeLine{90             square.setFillColor(sf::Color(192, 192, 192));}
+\DoxyCodeLine{91         \}}
+\DoxyCodeLine{92     \};}
+\DoxyCodeLine{93 }
+\DoxyCodeLine{97     \textcolor{keywordtype}{void} check\_border\_collision();}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{102     \textcolor{keywordtype}{void} check\_self\_collision();}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{109     \textcolor{keywordtype}{void} encounters\_fruit();}
+\DoxyCodeLine{110 }
+\DoxyCodeLine{115     \textcolor{keywordtype}{void} game\_over();}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{120     \textcolor{keywordtype}{void} update\_iterators();}
+\DoxyCodeLine{121 }
+\DoxyCodeLine{128     \textcolor{keywordtype}{bool} is\_opposite\_direction(\textcolor{keyword}{const} \mbox{\hyperlink{_snake_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}\& current\_direction, \textcolor{keyword}{const} \mbox{\hyperlink{_snake_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}\& new\_direction) \textcolor{keyword}{const};}
+\DoxyCodeLine{129 }
+\DoxyCodeLine{135     \textcolor{keywordtype}{void} draw(sf::RenderTarget\& target, sf::RenderStates states) \textcolor{keyword}{const override};}
+\DoxyCodeLine{136 }
+\DoxyCodeLine{137     \textcolor{keyword}{const} \textcolor{keywordtype}{float} M\_FACTOR = 0.95f;}
+\DoxyCodeLine{138 }
+\DoxyCodeLine{139     \textcolor{keywordtype}{float} m\_time\_step;}
+\DoxyCodeLine{140     \textcolor{keywordtype}{float} m\_time\_elapsed\{\};}
+\DoxyCodeLine{141     \mbox{\hyperlink{_game_8h_a33e243da48884e73997b5c5fa62864d4}{Game\_state}} m\_game\_state;}
+\DoxyCodeLine{142     \mbox{\hyperlink{_snake_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}} m\_current\_direction;}
+\DoxyCodeLine{143 }
+\DoxyCodeLine{144     std::unique\_ptr<World> m\_world;}
+\DoxyCodeLine{145     std::unique\_ptr<Snake> m\_snake;}
+\DoxyCodeLine{146     std::unique\_ptr<Fruit> m\_fruit;}
+\DoxyCodeLine{147     std::unique\_ptr<Score> m\_score;}
+\DoxyCodeLine{148 }
+\DoxyCodeLine{149     std::vector<sf::RectangleShape>::iterator m\_head\_it;}
+\DoxyCodeLine{150     std::vector<sf::RectangleShape>::iterator m\_tail\_it;}
+\DoxyCodeLine{151 \};}
+\DoxyCodeLine{152 }
+\DoxyCodeLine{153 \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
