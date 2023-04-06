@@ -12,7 +12,7 @@ World::World() : m_borders(M_TOTAL_BORDERS), m_grid((size_t)constants::SQUARES -
 
 void World::init_border() {
 	for (size_t border = 0; border < M_TOTAL_BORDERS; border++) {
-		// Sets each border at it's respective position with it's given size.
+		// Sets each border at its respective position with its given size.
 		auto set_properties = [&](const sf::Vector2f& position, const sf::Vector2f& size) -> void {
 			m_borders[border].setPosition(position);
 			m_borders[border].setSize(size);
